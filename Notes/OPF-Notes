@@ -1,0 +1,24 @@
+The example in http://nupic.docs.numenta.org/1.0.4.dev0/quick-start/opf.html is not working because we dont have the data files
+
+Steps:
+1. We need to create a model using the params (it will be called MODEL factory)
+    1.1 model_params understanding: check model.yaml
+    a. Encoders:
+        Consumption: RandomDistributedScalarEncoder
+
+2. enableInference will tell us which field to predict
+
+3. For each line in the data file, generate the input file in the correct format and use model.run(input)
+
+4. Predict how many steps you want in the future
+
+
+OPF data structure: Has the following models
+
+    BaseModel
+
+    HTM prediction model
+
+    two-gram model
+
+    Previous value model
