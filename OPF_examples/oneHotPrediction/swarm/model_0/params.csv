@@ -1,0 +1,2 @@
+modelParams|clParams|alpha,modelParams|sensorParams|encoders|_classifierInput|n,modelParams|sensorParams|encoders|kw_energy_consumption:n,modelParams|spParams|synPermInactiveDec,modelParams|tmParams|activationThreshold,modelParams|tmParams|minThreshold,modelParams|tmParams|pamLength
+0.050050000000000004,275,272,0.05015,14,11,3

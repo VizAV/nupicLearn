@@ -6,7 +6,7 @@ from itertools import islice
 
 from nupic.frameworks.opf.model_factory import ModelFactory
 
-_NUM_RECORDS = 3000
+_NUM_RECORDS = 15
 _EXAMPLE_DIR = os.path.dirname(os.path.abspath(__file__))
 _INPUT_FILE_PATH = os.path.join(_EXAMPLE_DIR, os.pardir, "data", "gymdata.csv")
 _PARAMS_PATH = os.path.join(_EXAMPLE_DIR, os.pardir, "params", "model.yaml")
@@ -34,7 +34,7 @@ def runHotgym(numRecords):
       modelInput = dict(zip(headers, record))
       modelInput["consumption"] = float(modelInput["consumption"])
       modelInput["timestamp"] = datetime.datetime.strptime(
-        modelInput["timestamp"], "%m/%d/%y %H:%M")
+        modelInput["timestamp"], "%Y-%m-%d %H:%M:%S.0")
       result = model.run(modelInput)
       bestPredictions = result.inferences["multiStepBestPredictions"]
       allPredictions = result.inferences["multiStepPredictions"]
